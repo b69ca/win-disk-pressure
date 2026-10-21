@@ -41,7 +41,7 @@ Exit codes: **0** report produced, including findings or partial evidence; **2**
 
 ## Evidence and findings
 
-Uses .NET filesystem metadata and volume free-space information. The scanner counts logical file lengths, maintains the largest observed files, and groups bytes by the first directory under the selected root. Reparse points, including junctions, symbolic links, and many cloud placeholders, are skipped. The root itself cannot be a reparse point. The first 20 access/I/O messages are retained with a total error count.
+Uses .NET filesystem metadata and volume free-space information. The scanner counts logical file lengths, maintains the largest observed files, and groups bytes by the first directory under the selected root. Reparse points, including junctions, symbolic links, and many cloud placeholders, are skipped. The root itself cannot be a reparse point. The first 20 access/I/O messages are retained with a total error count. Conventional Windows/user temporary, browser-cache, update-download, Installer, and component-store locations are grouped when encountered in the scan. Their byte figures cover observed files only; this is not a cleanup recommendation, and managed stores must not be treated as disposable caches. Customized paths can be missed.
 
 The low-space rule is less than 5 GiB available or less than 10% of volume size. This is a useful threshold, not an application-specific minimum.
 
