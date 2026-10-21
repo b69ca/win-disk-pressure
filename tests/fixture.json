@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "tool": "win-disk-pressure",
+  "collectedAtUtc": "2026-01-10T12:00:00Z",
+  "platform": "Synthetic Windows fixture",
+  "evidence": {
+    "path": "C:\\Example",
+    "filesObserved": 3,
+    "entriesVisited": 5,
+    "logicalBytesObserved": 3000,
+    "availableFreeBytes": 1073741824,
+    "volumeTotalBytes": 107374182400,
+    "reparsePointsSkipped": 1,
+    "accessOrIoErrors": 0,
+    "budgetReached": true,
+    "elapsedSeconds": 1,
+    "largestFiles": [
+      {
+        "path": "C:\\Example\\large.bin",
+        "bytes": 2500
+      }
+    ],
+    "topLevelGroups": [
+      {
+        "name": "Logs",
+        "bytes": 3000
+      }
+    ]
+  },
+  "issues": []
+}
