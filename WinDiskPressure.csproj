@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+    <AssemblyName>win-disk-pressure</AssemblyName><RootNamespace>WinDiagnostics</RootNamespace><Version>1.0.0</Version><Description>Find large files and disk pressure with a bounded scan that skips reparse points.</Description><EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+  <ItemGroup><Compile Remove="tests/**/*.cs" /><EmbeddedResource Include="Collector.ps1" LogicalName="Collector.ps1" Condition="Exists('Collector.ps1')" /></ItemGroup>
+</Project>
